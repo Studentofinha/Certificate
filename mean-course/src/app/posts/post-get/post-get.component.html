@@ -1,0 +1,43 @@
+<button mat-raised-button color='primary' class="button" type="button" (click)="convetToPDF()">Convert</button>
+
+<mat-accordion>
+    <div class="fix1" id="contentToConvert" style="width:950px; height:900px; padding:20px; text-align:center; border: 10px solid #787878">
+        <div style="width:900px; height:850px; padding:20px; text-align:center; border: 5px solid #787878">
+            <span style="font-size:50px; font-weight:bold">Certificate of Completion</span>
+            <br><br>
+            <span style="font-size:25px"><i>This is to certify that</i></span>
+            <br><br>
+            <span style="font-size:30px"><h2>
+             <p> {{post.title}}</p> <p>{{post.content}}</p>
+           </h2>
+          </span><br/><br/>
+            <span style="font-size:25px"><i>has completed the course</i></span> <br/><br/>
+            <span style="font-size:30px"><h2>
+              <p>{{ post.courseName }}</p>
+            </h2>
+           </span>
+
+            <span style="font-size:20px"><h3>
+
+            <p>{{post.startDate}}</p>
+            </h3>
+            </span>
+            <span style="font-size:20px"><h3>
+            <p>{{post.endDate}}</p>
+
+
+           </h3>
+          </span>
+            <span style="font-size:30px">
+            <h3>
+
+              <p>{{ post.comment }}</p>
+            </h3>
+            </span>
+            <br/><br/><br/><br/>
+
+
+
+        </div>
+    </div>
+</mat-accordion>

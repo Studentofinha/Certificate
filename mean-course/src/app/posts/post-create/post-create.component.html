@@ -1,0 +1,35 @@
+<mat-card>
+    <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+        <mat-form-field>
+            <input matInput type="text" name="title" ngModel required minlength="3" #title="ngModel" placeholder="Name" [ngModel]="post?.title">
+            <mat-error *ngIf="title.invalid">Please enter a name</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput rows="4" ngModel name="content" required #content="ngModel" placeholder="Surname" [ngModel]="post?.content">
+
+            <mat-error *ngIf="content.invalid">Please enter a surname</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput rows="4" ngModel name="courseName" required #courseName="ngModel" placeholder="CourseName" [ngModel]="post?.courseName">
+            <mat-error *ngIf="courseName.invalid">Please enter a CourseName</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput type="text" ngModel name="comment" required #comment="ngModel" placeholder="Comment" [ngModel]="post?.comment">
+            <mat-error *ngIf="comment.invalid">Please enter a Comment</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput type="date" rows="4" ngModel name="startDate" required #startDate="ngModel" placeholder="StartDate" [ngModel]="post?.startDate">
+            <mat-error *ngIf="startDate.invalid">Please enter a start Date</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput type="date" name="endDate" ngModel required #endDate="ngModel" placeholder="EndDate" [ngModel]="post?.endDate">
+            <mat-error *ngIf="endDate.invalid">Please enter a end Date</mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">Submit</button>
+    </form>
+
+</mat-card>
